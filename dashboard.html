@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #80C4E9;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+        }
+        .header .title {
+            font-size: 24px;
+        }
+        .header .logout {
+            cursor: pointer;
+        }
+        .container {
+            padding: 20px;
+        }
+        .dashboard {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .dashboard input[type="text"] {
+            padding: 5px;
+            margin-left: 10px;
+            width: 200px;
+        }
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .stock-table th, .stock-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .stock-table th {
+            background-color: #80C4E9;
+            color: white;
+        }
+        .icon-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .icon-button img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="profile">
+            <button class="icon-button"><img src="images/profile-user.png" alt="Profile" 
+                onclick="profile()"></button>
+        </div>
+        <div class="title">Warehouse Management System</div>
+        <div class="logout">
+            <button onclick="logout()" class="icon-button"><img src="images/log-out.png" alt="Back"></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="dashboard">
+            <div>Dashboard</div>
+            <input type="text" placeholder="Search...">
+            <button class="icon-button"><img src="images/plus.png" alt="Add" onclick="addItem()"></button>
+            <button class="icon-button"><img src="images/edit.png" alt="Edit" onclick="editItem()"></button>
+            <button class="icon-button"><img src="images/time.png" alt="History" onclick="viewHistory()"></button>
+        </div>
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th>No. </th>
+                    <th>ID Barang</th>
+                    <th>Nama Barang</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. </td>
+                    <td>15423</td>
+                    <td>Buku</td>
+                    <td>100</td>
+                    <td>12/12/2024</td>
+                    <td><button class="icon-button"><img src="images/info.png" alt="Info" onclick="viewDetails1()"></button></td>
+                </tr>
+                <tr>
+                    <td>2. </td>
+                    <td>54231</td>
+                    <td>Pensil</td>
+                    <td>50</td>
+                    <td>12/12/2024</td>
+                    <td><button class="icon-button"><img src="images/info.png" alt="Info" onclick="viewDetails2()"></button></td>
+                </tr>
+                <tr>
+                    <td>3. </td>
+                    <td>23415</td>
+                    <td>Penggaris</td>
+                    <td>25</td>
+                    <td>12/12/2024</td>
+                    <td><button class="icon-button"><img src="images/info.png" alt="Info" onclick="viewDetails3()"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function logout() {
+            // Add logout functionality here
+            alert('Logged out');
+            window.location.href = 'login.html';
+        }
+
+        function profile(){
+            window.location.href = 'profile.html';
+        }
+
+        function addItem() {
+            // Add item functionality here
+            alert('Add item');
+            window.location.href = 'tambah.html';
+        }
+
+        function editItem() {
+            // Edit item functionality here
+            alert('Choose page');
+            window.location.href = 'navigasi.html';
+        }
+
+        function viewHistory() {
+            // View history functionality here
+            alert('View history');
+            window.location.href = 'deliveryHistory.html';
+        }
+
+        function viewDetails1() {
+            // View details functionality here
+            alert('View detail');
+            window.location.href = 'detail1.html';
+        }
+
+        function viewDetails2() {
+            // View details functionality here
+            alert('View detail');
+            window.location.href = 'detail2.html';
+        }
+
+        function viewDetails3() {
+            // View details functionality here
+            alert('View detail');
+            window.location.href = 'detail3.html';
+        }
+    </script>
+
+</body>
+</html>

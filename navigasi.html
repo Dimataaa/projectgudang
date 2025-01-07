@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif; /* Ganti font di sini */
+        }
+        .container {
+            background-color: #80C4E9;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
+        .button {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .back-button img {
+            width: 30px;
+            height: 30px;
+        }
+        .back-button span {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+<script>
+    function editStok(){
+        window.location.href = 'editStok.html';
+    }
+    function kirimBarang() {
+            window.location.href = 'krmBarang.html';
+        }
+</script>
+
+</head>
+<body>
+    <div class="back-button" onclick="location.href = 'dashboard.html';">
+        <img src="images/back.png" alt="Back">
+    </div>
+    <div class="container">
+        <button onclick="editStok()" class="button">Edit Stok</button>
+        <button onclick="kirimBarang()" class="button">kirim barang</button>
+    </div>
+</body>
+</html>

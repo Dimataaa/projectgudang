@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #80C4E9;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+        }
+        .header .title {
+            font-size: 24px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .value {
+            background-color: #e9e9e9;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: 65%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="profile">
+            <img src="images/profile-user.png" alt="Profile">
+        </div>
+        <div class="title">Profil Admin</div>
+        <div class="settings">
+            <button class="icon-button" onclick="goToPage('setting.html')"><img src="images/setting.png" alt="Settings"></button>
+        </div>
+        <div class="back">
+            <button class="icon-button" onclick="goToPage('dashboard.html')"><img src="images/back.png" alt="Back"></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="label">No ID Admin</div>
+            <div class="value">12345</div>
+        </div>
+        <div class="row">
+            <div class="label">Username Admin</div>
+            <div class="value">adminABCDE</div>
+        </div>
+    </div>
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

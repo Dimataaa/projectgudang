@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #80C4E9;
+            color: #fff;
+            padding: 10px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .header .icons img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #80C4E9;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #80C4E9;
+            color: #fff;
+        }
+        .edit-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Warehouse Management System</h1>
+            <div class="icons">
+                <img src="images/back.png" alt="Back" onclick="goBack()">
+                <img src="images/history-edit.png" alt="Mail" onclick="goToRiwayatEdit()">
+            </div>
+        </div>
+        <div class="table-container">
+            <h2>Edit Stok</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Barang</th>
+                        <th>Nama Barang</th>
+                        <th>Jumlah</th>
+                        <th>Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15423</td>
+                        <td>Buku</td>
+                        <td>100</td>
+                        <td>12/12/2024 <button onclick="location.href='edit1.html';"
+                             class="edit-button">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>54231</td>
+                        <td>Pensil</td>
+                        <td>50</td>
+                        <td>12/12/2024 <button onclick="location.href='edit2.html';"
+                            class="edit-button">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>23415</td>
+                        <td>Penggaris</td>
+                        <td>25</td>
+                        <td>12/12/2024 <button onclick="location.href='edit3.html';"
+                            class="edit-button">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'navigasi.html';
+        }
+
+        function goToRiwayatEdit() {
+            window.location.href = 'historyEdit.html';
+        }
+    </script>
+</body>
+</html>

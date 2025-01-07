@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+            position: relative;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .value {
+            background-color: #e9e9e9;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: 65%;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .back-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/back.png" alt="Back" class="icon back-icon" onclick="goBack()">
+        <div class="header">Detail Barang</div>
+        <div class="row">
+            <div class="label">ID Barang</div>
+            <div class="value">23415</div>
+        </div>
+        <div class="row">
+            <div class="label">Nama Barang</div>
+            <div class="value">Penggaris</div>
+        </div>
+        <div class="row">
+            <div class="label">Tanggal</div>
+            <div class="value">12/12/2024</div>
+        </div>
+        <div class="row">
+            <div class="label">Jumlah</div>
+            <div class="value">25</div>
+        </div>
+        <div class="footer">
+            <img src="images/direct.png" alt="Send" class="icon" onclick="sendData()">
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            // Ganti dengan fungsi yang sesuai untuk kembali ke halaman sebelumnya
+            window.location.href = 'dashboard.html';
+        }
+        function sendData() {
+            // Ganti dengan fungsi yang sesuai untuk mengirim data
+            alert("Kirim ?");
+            window.location.href = 'invoice3.html';
+        }
+    </script>
+</body>
+</html>

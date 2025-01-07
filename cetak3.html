@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetak Perubahan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-container h1 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .cetak-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .cetak-button button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        .notification { 
+            display: none; 
+            background-color: #d4edda; 
+            color: #155724; 
+            padding: 10px; 
+            margin-top: 20px; 
+            border: 1px solid #c3e6cb; 
+            border-radius: 5px; 
+        }
+    </style>
+    <script>
+        function validateDate() {
+            var tanggalInput = document.getElementById("ubah-tanggal").value;
+            if (tanggalInput === "") {
+                alert("Gagal!. Tanggal diubah wajib diisi!!!");
+                return false;
+            }
+            return true;
+        }
+        function saveData(){
+            alert('Data tersimpan dan cetak!')
+            window.location.href = 'print.html';
+            // Show notification
+            document.getElementById('notification').style.display = 'block';
+            setTimeout(function(){
+                window.location.href = 'print.html';
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <div class="back-button">
+        <a href="edit3.html" onclick="return validateDate();">
+            <img src="images/back.png" alt="Back" style="width:30px;height:30px;">
+        </a>
+    </div>
+    <div class="form-container">
+        <h1>Cetak Perubahan</h1>
+        <form>
+            <label for="ubah-tanggal">Diubah pada tanggal:</label>
+            <input type="date" id="ubah-tanggal" name="ubah-tanggal"><br><br>
+            
+            <label for="id-barang">ID Barang:</label>
+            <input type="text" id="id-barang" name="id-barang" value="23415" readonly><br><br>
+            
+            <label for="nama-barang">Nama Barang:</label>
+            <input type="text" id="nama-barang" name="nama-barang" value="Penggaris" readonly><br><br>
+            
+            <label for="jumlah">Jumlah:</label>
+            <input type="text" id="jumlah" name="jumlah" value="25" readonly><br><br>
+            
+            <label for="tanggal">Tanggal:</label>
+            <input type="text" id="tanggal" name="tanggal" value="12/12/2024" readonly><br><br>
+        </form>
+        <div class="cetak-button">
+                <button onclick="saveData()" type="button">Cetak</button>
+            </a>
+        </div>
+        <div id="notification" class="notification">Cetak</div> </div>
+    </div>
+    </div>
+</body>
+</html>

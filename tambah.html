@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #80C4E9;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .header button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .header img {
+            width: 25px;
+            height: 25px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .form-group button img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button onclick="goBack()">
+                <img src="images/back.png" alt="Back">
+            </button>
+        </div>
+        <div class="form-group">
+            <label for="id-barang">ID Barang</label>
+            <input type="text" id="id-barang" name="id-barang">
+        </div>
+        <div class="form-group">
+            <label for="nama-barang">Nama Barang</label>
+            <input type="text" id="nama-barang" name="nama-barang">
+        </div>
+        <div class="form-group">
+            <label for="jumlah">Jumlah</label>
+            <input type="number" id="jumlah" name="jumlah">
+        </div>
+        <div class="form-group">
+            <label for="tanggal">Tanggal</label>
+            <input type="date" id="tanggal" name="tanggal">
+        </div>
+        <div class="form-group">
+            <button type="submit">
+                <img src="images/plus.png" alt="Simpan">
+            </button>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            // Function to go back
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

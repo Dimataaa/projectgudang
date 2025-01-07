@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .back-icon {
+            background: url('back-icon.png') no-repeat center center;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .form-group input[readonly] {
+            border-bottom: 1px solid #ccc;
+        }
+        .form-group input.editable {
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: text;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function goBack() {
+            alert('Back?');
+            window.location.href = 'editStok.html';
+        }
+        function submit(){
+            alert('Harus cetak data dapat disimpan!')
+            window.location.href = 'cetak2.html';
+        }
+        function makeEditable(event) {
+            event.target.removeAttribute('readonly');
+            event.target.classList.add('editable');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Warehouse Management System</h1>
+            <div class="back-icon">
+                <img src="images/back.png" width="20px" height="20px" alt="Back" onclick="goBack()">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="id-barang">ID Barang</label>
+            <input type="text" id="id-barang" name="id-barang" value="54231" readonly onclick="makeEditable(event)">
+        </div>
+        <div class="form-group">
+            <label for="nama-barang">Nama Barang</label>
+            <input type="text" id="nama-barang" name="nama-barang" value="Pensil" readonly onclick="makeEditable(event)">
+        </div>
+        <div class="form-group">
+            <label for="jumlah">Jumlah</label>
+            <input type="number" id="jumlah" name="jumlah" value="50" readonly onclick="makeEditable(event)">
+        </div>
+        <div class="form-group">
+            <label for="tanggal">Tanggal</label>
+            <input type="date" id="tanggal" name="tanggal" value="2024-12-12" readonly onclick="makeEditable(event)">
+        </div>
+        <div class="form-group">
+            <button onclick="submit()" type="submit">Submit</button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <style>
+        body {
+            background-color: #d3d3d3;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #80C4E9;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: 50px auto;
+        }
+        .container h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+        .back-button {
+            display: flex;
+            justify-content: flex-end;
+            width: 24px;
+            height: 24px;
+        }
+        .back-button img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div onclick="location.href='login.html';" class="back-button">
+            <img src="images/back.png" alt="Back">
+        </div>
+        <h1>Setting</h1>
+        <div class="form-group">
+            <label for="admin-id">Tambah akun admin</label>
+            <input type="text" id="admin-id" placeholder="ID Admin">
+            <input type="text" id="admin-username" placeholder="Username">
+            <input type="password" id="admin-password" placeholder="Password">
+            <button onclick="createAdmin()">Buat</button>
+        </div>
+        <div class="form-group">
+            <label for="identity-id">Ganti identitas</label>
+            <input type="text" id="identity-id" placeholder="ID Admin">
+            <input type="text" id="identity-username" placeholder="Username">
+            <input type="password" id="identity-password" placeholder="Password">
+            <button onclick="submitIdentity()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function createAdmin() {
+            // Function to create admin account
+        }
+
+        function submitIdentity() {
+            // Function to submit identity change
+        }
+    </script>
+</body>
+</html>

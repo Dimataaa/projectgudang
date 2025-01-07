@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #80C4E9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header .back-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .header .back-button img {
+            width: 30px;
+            height: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .direct-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .direct-button img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<script>
+    function goBack(){
+        alert('Back?');
+        window.location.href = 'navigasi.html';
+    }
+    function btnInvoice1(){
+        alert('Buat Invoice')
+        window.location.href = 'invoice1.html';
+    }
+    function btnInvoice2(){
+        alert('Buat Invoice')
+        window.location.href = 'invoice2.html';
+    }
+    function btnInvoice3(){
+        alert('Buat Invoce')
+        window.location.href = 'invoice3.html';
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>kirim Barang</h1>
+            <button onclick="goBack()"
+             class="back-button">
+                <img src="images/back.png" alt="Back">
+            </button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>ID Barang</th>
+                    <th>Nama Barang</th>
+                    <th>Tanggal</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal Perubahan</th>
+                    <th>Kirim</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>15423</td>
+                    <td>Buku</td>
+                    <td>12/12/2024</td>
+                    <td>100</td>
+                    <td>05/01/2025</td>
+                    <td>
+                        <button class="direct-button" onclick="btnInvoice1()">
+                            <img src="images/direct.png" alt="direct">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>54231</td>
+                    <td>Pensil</td>
+                    <td>12/12/2024</td>
+                    <td>50</td>
+                    <td>05/01/2025</td>
+                    <td>
+                        <button class="direct-button" onclick="btnInvoice2()">
+                            <img src="images/direct.png" alt="direct">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>23415</td>
+                    <td>Penggaris</td>
+                    <td>12/12/2024</td>
+                    <td>25</td>
+                    <td>05/01/2025</td>
+                    <td>
+                        <button class="direct-button" onclick="btnInvoice3()">
+                            <img src="images/direct.png" alt="direct">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

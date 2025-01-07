@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            position: relative;
+        }
+        .login-container {
+            background: #80C4E9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #9AA6B2;
+        }
+        .settings-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .settings-btn img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="location.href='setting.html';"
+    type="submit" class="settings-btn" aria-label="Pengaturan">
+        <img src="images/setting.png" alt="Settings">
+    </button>
+
+    <div class="login-container">
+        <h7>Warehouse Management System</h7>
+        <h4>Login</h4>
+        <h5>Login hanya admin saja</h5>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button onclick="location.href='dashboard.html';"
+            type="submit" class="btn">
+                Login
+            </button>
+        </form>
+    </div>
+</body>
+</html>
